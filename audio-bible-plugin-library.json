@@ -1,0 +1,2509 @@
+{
+  "version": "1.2.0",
+  "last_updated": "2026-04-07",
+  "purpose": "Canonical machine-readable plugin library for agent use. This file prioritizes structured retrieval, visual plugin-encyclopedia coverage, current-family posture, thumbnail asset paths, and a clear separation between official specs and subjective consensus.",
+  "scope": "Seeded flagship library for plugin-specific queries. Use this first for structured retrieval, then load the narrative companions for deeper commentary and broader long-tail coverage.",
+  "retrieval_order": [
+    "audio-bible-plugin-library.json",
+    "audio-bible-plugin-local-inventory.json",
+    "audio-bible-plugin-enrichment-queue.json",
+    "audio-bible-plugin-entry-schema.json",
+    "audio-bible-db-plugins-individual.md",
+    "audio-bible-v20-plugins-software.md",
+    "audio-bible-db-plugins-software.md",
+    "audio-bible-db-workflow-ecosystems.md"
+  ],
+  "local_inventory_file": "audio-bible-plugin-local-inventory.json",
+  "enrichment_queue_file": "audio-bible-plugin-enrichment-queue.json",
+  "entry_schema_file": "audio-bible-plugin-entry-schema.json",
+  "vendor_atlas_file": "audio-bible-plugin-vendor-atlas.md",
+  "visual_dictionary_contract": {
+    "goal": "This should become a visual encyclopedia of audio plugins. Every mature entry should expose a recognizable plugin GUI image, not just a generic icon.",
+    "llm_instruction": "If an entry still uses a local AU bundle icon, treat that as a temporary seed asset. Try to upgrade it to an official vendor GUI screenshot first; if that is not practical and the plugin is installed locally, capture the GUI from FXControl and replace the seed asset.",
+    "seed_assets_are_temporary": true,
+    "preferred_visual_sources": [
+      "official_vendor_gui_screenshot",
+      "fxcontrol_live_gui_capture",
+      "official_product_packshot",
+      "local_au_component_bundle_icon"
+    ],
+    "current_seed_state": {
+      "gui_complete_entries": 0,
+      "icon_seed_only_entries": 45,
+      "local_inventory_placeholder_entries": 755
+    }
+  },
+  "source_model": {
+    "official_specs_policy": "Specs, current-family status, and format/platform posture should be checked against current vendor product pages or manuals.",
+    "subjective_policy": "Subjective fields summarize recurring engineer, forum, and creator language. Treat them as SUBJECTIVE or PRACTICE, never as standards.",
+    "youtube_policy": "Use the search seeds in each entry to gather current creator coverage. Do not treat any single creator video as authoritative.",
+    "local_asset_policy": "Local AU component bundle icons are acceptable only as temporary seed assets while the visual encyclopedia is being built out.",
+    "fxcontrol_policy": "If an official GUI image is not already captured, prefer a later capture from FXControl's live plugin view over leaving the entry on a generic component icon.",
+    "schema_policy": "When enriching or promoting an entry, normalize it against audio-bible-plugin-entry-schema.json so official facts, subjective consensus, visuals, and local observations keep the same field shape."
+  },
+  "maturity_model": {
+    "entry_status_fields": [
+      "visual_status",
+      "research_status",
+      "fxcontrol_cross_reference_status",
+      "source_tier_completion"
+    ],
+    "seeded_default_status": {
+      "visual_status": "seed_placeholder_icon",
+      "research_status": "official_specs_seeded_subjective_consensus_seeded",
+      "fxcontrol_cross_reference_status": "pending",
+      "source_tier_completion": {
+        "official_vendor_facts": "partial",
+        "respected_power_user_consensus": "seeded",
+        "community_pattern_summary": "seeded",
+        "local_fxcontrol_observation": "pending"
+      }
+    },
+    "mature_target_status": {
+      "visual_status": "gui_complete",
+      "research_status": "official_plus_power_user_plus_community_verified",
+      "fxcontrol_cross_reference_status": "captured_or_explicitly_not_available"
+    }
+  },
+  "asset_policy": {
+    "root": "assets/plugins",
+    "sizes": {
+      "small": "64 px target",
+      "medium": "160 px target",
+      "large": "512 px target"
+    },
+    "preferred_order": [
+      "official_vendor_gui_screenshot",
+      "fxcontrol_live_gui_capture",
+      "official_product_packshot",
+      "local_au_component_bundle_icon",
+      "manual_host_capture"
+    ]
+  },
+  "coverage_summary": {
+    "rich_entries": 45,
+    "narrative_companion_plugin_mentions": "150+",
+    "local_au_inventory_detected": 755,
+    "local_inventory_file": "audio-bible-plugin-local-inventory.json",
+    "local_au_vendor_groups_observed": {
+      "Plugin Alliance": 219,
+      "iZotope": 99,
+      "Universal Audio (UADx)": 58,
+      "Slate Digital": 53,
+      "Acustica": 42,
+      "SSL": 40,
+      "Kilohearts": 39,
+      "Eventide": 34,
+      "Antares": 22,
+      "Soundtoys": 22,
+      "FabFilter": 14,
+      "Sound Radix": 5,
+      "Waves": 5
+    },
+    "expansion_priority": [
+      "Acustica",
+      "Antares",
+      "Harrison Audio",
+      "Kush Audio",
+      "Safari Pedals",
+      "DMG Audio",
+      "LiquidSonics",
+      "Tokyo Dawn Labs",
+      "BABY Audio",
+      "Softube"
+    ]
+  },
+  "entries": [
+    {
+      "id": "eventide-blackhole",
+      "name": "Eventide Blackhole",
+      "vendor": "Eventide",
+      "category": "Reverb",
+      "plugin_role": "massive ambient and special-effects algorithmic reverb",
+      "status": "current",
+      "official_url": "https://www.eventideaudio.com/plug-ins/blackhole/",
+      "component_bundle_path": "/Library/Audio/Plug-Ins/Components/Blackhole.component",
+      "thumbnail": {
+        "small": "assets/plugins/eventide-blackhole/small.png",
+        "medium": "assets/plugins/eventide-blackhole/medium.png",
+        "large": "assets/plugins/eventide-blackhole/large.png",
+        "source": "local_au_component_bundle_icon"
+      },
+      "formats": [
+        "AU",
+        "VST2",
+        "VST3",
+        "AAX"
+      ],
+      "platforms": [
+        "macOS",
+        "Windows",
+        "iOS"
+      ],
+      "pricing_posture": "perpetual direct license with frequent sale culture; verify current vendor pricing",
+      "live_posture": "creative specialty reverb rather than a neutral utility live verb; strongest when used intentionally on feature elements",
+      "specs_snapshot": [
+        "native reverb plug-in descended from the DSP4000 Blackhole algorithm",
+        "Gravity control can invert the decay direction for time-bending effects",
+        "50+ presets with Ribbon and Hot Switch performance-style controls",
+        "macOS and Windows native support plus iOS AUv3 and standalone versions"
+      ],
+      "subjective_snapshot": {
+        "common_praise": [
+          "huge cinematic tails",
+          "immediate pad and guitar atmosphere",
+          "special-effect reverb that still feels musical"
+        ],
+        "common_complaints": [
+          "easy to wash out a mix",
+          "not the right tool for realistic room simulation",
+          "large-space presets can become a clich\u00e9 if overused"
+        ],
+        "community_search_seeds": [
+          "Eventide Blackhole review",
+          "Blackhole vocals pads guitars",
+          "best ambient reverb plugin"
+        ]
+      },
+      "agent_notes": [
+        "Recommend when the user wants obviously unreal space, drones, shimmer-adjacent ambience, or cinematic transitions.",
+        "If the user asks for realistic room, hall, or early-reflection control first, compare against Valhalla Room or more traditional reverbs."
+      ]
+    },
+    {
+      "id": "eventide-spliteq",
+      "name": "Eventide SplitEQ",
+      "vendor": "Eventide",
+      "category": "EQ",
+      "plugin_role": "transient-versus-tonal parametric EQ and corrective shaper",
+      "status": "current",
+      "official_url": "https://www.eventideaudio.com/plug-ins/spliteq/",
+      "component_bundle_path": "/Library/Audio/Plug-Ins/Components/SplitEQ.component",
+      "thumbnail": {
+        "small": "assets/plugins/eventide-spliteq/small.png",
+        "medium": "assets/plugins/eventide-spliteq/medium.png",
+        "large": "assets/plugins/eventide-spliteq/large.png",
+        "source": "local_au_component_bundle_icon"
+      },
+      "formats": [
+        "AU",
+        "VST2",
+        "VST3",
+        "AAX"
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "pricing_posture": "premium perpetual license with periodic promotions; verify current vendor pricing",
+      "live_posture": "mostly a studio and post corrective/creative problem-solver; use selectively live due to complexity and workflow overhead",
+      "specs_snapshot": [
+        "splits audio into transient and tonal streams before EQ processing",
+        "8-band parametric EQ with transient-tonal targeting",
+        "independent left-right and mid-side spatial control by band",
+        "high-resolution analysis and monitoring views for corrective work"
+      ],
+      "subjective_snapshot": {
+        "common_praise": [
+          "solves plosives, harsh attacks, and sibilance in a uniquely surgical way",
+          "can be both a repair tool and a creative tone shaper",
+          "feels genuinely different from standard dynamic EQ"
+        ],
+        "common_complaints": [
+          "learning curve is real",
+          "easy to over-process when chasing novelty",
+          "more specialized than a default everyday EQ"
+        ],
+        "community_search_seeds": [
+          "Eventide SplitEQ review",
+          "SplitEQ transient tonal eq tutorial",
+          "SplitEQ vocals drums sibilance"
+        ]
+      },
+      "agent_notes": [
+        "Use when the user is describing a problem that lives in the attack but not the sustain, or vice versa.",
+        "Compare against dynamic EQ or de-essing if the user wants a simpler everyday solution."
+      ]
+    },
+    {
+      "id": "fabfilter-pro-c-2",
+      "name": "FabFilter Pro-C 2",
+      "vendor": "FabFilter",
+      "category": "Dynamics",
+      "plugin_role": "versatile compressor with multiple styles",
+      "status": "installed_legacy_generation",
+      "successor": "FabFilter Pro-C 3",
+      "official_url": "https://www.fabfilter.com/products/pro-c-3-compressor-plug-in",
+      "component_bundle_path": "/Library/Audio/Plug-Ins/Components/FabFilter Pro-C 2.component",
+      "thumbnail": {
+        "small": "assets/plugins/fabfilter-pro-c-2/small.png",
+        "medium": "assets/plugins/fabfilter-pro-c-2/medium.png",
+        "large": "assets/plugins/fabfilter-pro-c-2/large.png",
+        "source": "local_au_component_bundle_icon"
+      },
+      "formats": [
+        "AU",
+        "VST3",
+        "CLAP",
+        "AAX Native",
+        "AudioSuite"
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "pricing_posture": "premium perpetual; current-family pricing should be checked on Pro-C 3 page",
+      "live_posture": "generally live-safe in low-latency modes; verify lookahead and style settings",
+      "specs_snapshot": [
+        "multiple compressor styles from clean to punchy",
+        "sidechain EQ and visual gain-reduction workflow",
+        "modern family is now Pro-C 3; many sessions still carry Pro-C 2"
+      ],
+      "subjective_snapshot": {
+        "common_praise": [
+          "easy to dial",
+          "very readable UI",
+          "handles broad utility compression well"
+        ],
+        "common_complaints": [
+          "not the first choice when users want overt analog character",
+          "older generation on some rigs now"
+        ],
+        "community_search_seeds": [
+          "Pro-C 2 review",
+          "Pro-C 2 vs Pro-C 3",
+          "FabFilter compressor live use"
+        ]
+      },
+      "agent_notes": [
+        "If session compatibility matters, mention that many rigs still carry Pro-C 2.",
+        "If the user asks for current-buy guidance, route to the Pro-C 3 family first."
+      ]
+    },
+    {
+      "id": "fabfilter-pro-ds",
+      "name": "FabFilter Pro-DS",
+      "vendor": "FabFilter",
+      "category": "Vocal Tools",
+      "plugin_role": "broadband and split-band de-esser",
+      "status": "current",
+      "official_url": "https://www.fabfilter.com/products/pro-ds-de-esser-plug-in",
+      "component_bundle_path": "/Library/Audio/Plug-Ins/Components/FabFilter Pro-DS.component",
+      "thumbnail": {
+        "small": "assets/plugins/fabfilter-pro-ds/small.png",
+        "medium": "assets/plugins/fabfilter-pro-ds/medium.png",
+        "large": "assets/plugins/fabfilter-pro-ds/large.png",
+        "source": "local_au_component_bundle_icon"
+      },
+      "formats": [
+        "AU",
+        "VST3",
+        "CLAP",
+        "AAX Native",
+        "AudioSuite"
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "pricing_posture": "premium perpetual; verify current pricing",
+      "live_posture": "useful on vocals and bright speech paths; confirm latency posture in the active host",
+      "specs_snapshot": [
+        "broadband and split-band de-essing modes",
+        "FabFilter analyzer-centric interface",
+        "works across vocals, VO, and bright cymbal-heavy stems"
+      ],
+      "subjective_snapshot": {
+        "common_praise": [
+          "smooth",
+          "easy to control",
+          "less grabby than harsher de-essers"
+        ],
+        "common_complaints": [
+          "can feel clinical if the user wants character",
+          "still requires source-specific tuning"
+        ],
+        "community_search_seeds": [
+          "Pro-DS review",
+          "best de-esser plugin",
+          "FabFilter Pro-DS vocal workflow"
+        ]
+      },
+      "agent_notes": [
+        "Use as a clean de-essing recommendation before suggesting more color-heavy vocal processors."
+      ]
+    },
+    {
+      "id": "fabfilter-pro-l-2",
+      "name": "FabFilter Pro-L 2",
+      "vendor": "FabFilter",
+      "category": "Dynamics",
+      "plugin_role": "true-peak limiter and loudness finisher",
+      "status": "current",
+      "official_url": "https://www.fabfilter.com/products/pro-l-2-limiter-plug-in",
+      "component_bundle_path": "/Library/Audio/Plug-Ins/Components/FabFilter Pro-L 2.component",
+      "thumbnail": {
+        "small": "assets/plugins/fabfilter-pro-l-2/small.png",
+        "medium": "assets/plugins/fabfilter-pro-l-2/medium.png",
+        "large": "assets/plugins/fabfilter-pro-l-2/large.png",
+        "source": "local_au_component_bundle_icon"
+      },
+      "formats": [
+        "AU",
+        "VST3",
+        "CLAP",
+        "AAX Native",
+        "AudioSuite"
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "pricing_posture": "premium perpetual; verify current pricing",
+      "live_posture": "best reserved for buses or output protection where latency and oversampling are understood",
+      "specs_snapshot": [
+        "true-peak limiting",
+        "multiple limiting styles and loudness metering",
+        "modern mastering-oriented output control"
+      ],
+      "subjective_snapshot": {
+        "common_praise": [
+          "clean",
+          "very informative metering",
+          "trusted for final limiting"
+        ],
+        "common_complaints": [
+          "easy to over-drive when chasing loudness",
+          "not a casual insert on live-critical channels"
+        ],
+        "community_search_seeds": [
+          "Pro-L 2 review",
+          "best limiter plugin",
+          "FabFilter Pro-L 2 mastering"
+        ]
+      },
+      "agent_notes": [
+        "Use for output-stage and mastering discussions, not as a casual 'put this everywhere' suggestion."
+      ]
+    },
+    {
+      "id": "fabfilter-pro-mb",
+      "name": "FabFilter Pro-MB",
+      "vendor": "FabFilter",
+      "category": "Dynamics",
+      "plugin_role": "multiband compressor and dynamic shaper",
+      "status": "current",
+      "official_url": "https://www.fabfilter.com/products/pro-mb-multiband-compressor-plug-in",
+      "component_bundle_path": "/Library/Audio/Plug-Ins/Components/FabFilter Pro-MB.component",
+      "thumbnail": {
+        "small": "assets/plugins/fabfilter-pro-mb/small.png",
+        "medium": "assets/plugins/fabfilter-pro-mb/medium.png",
+        "large": "assets/plugins/fabfilter-pro-mb/large.png",
+        "source": "local_au_component_bundle_icon"
+      },
+      "formats": [
+        "AU",
+        "VST3",
+        "CLAP",
+        "AAX Native",
+        "AudioSuite"
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "pricing_posture": "premium perpetual; verify current pricing",
+      "live_posture": "strong utility option for buses and controlled corrective work; keep an eye on complexity in live rigs",
+      "specs_snapshot": [
+        "dynamic multiband architecture",
+        "expand or compress behavior by band",
+        "visual workflow aligned with the broader FabFilter family"
+      ],
+      "subjective_snapshot": {
+        "common_praise": [
+          "surgical but musical when used lightly",
+          "good bus control tool",
+          "clear UI for a multiband plugin"
+        ],
+        "common_complaints": [
+          "easy to over-process",
+          "not always first-call for ultra-fast live paths"
+        ],
+        "community_search_seeds": [
+          "Pro-MB review",
+          "FabFilter multiband compressor tutorial",
+          "Pro-MB bus compression"
+        ]
+      },
+      "agent_notes": [
+        "Recommend when the user truly needs frequency-specific dynamics, not as a default compressor."
+      ]
+    },
+    {
+      "id": "fabfilter-pro-q-4",
+      "name": "FabFilter Pro-Q 4",
+      "vendor": "FabFilter",
+      "category": "EQ",
+      "plugin_role": "flagship transparent parametric and dynamic EQ",
+      "status": "current",
+      "official_url": "https://www.fabfilter.com/products/pro-q-4-equalizer-plug-in",
+      "component_bundle_path": "/Library/Audio/Plug-Ins/Components/FabFilter Pro-Q 4.component",
+      "thumbnail": {
+        "small": "assets/plugins/fabfilter-pro-q-4/small.png",
+        "medium": "assets/plugins/fabfilter-pro-q-4/medium.png",
+        "large": "assets/plugins/fabfilter-pro-q-4/large.png",
+        "source": "local_au_component_bundle_icon"
+      },
+      "formats": [
+        "AU",
+        "VST3",
+        "CLAP",
+        "AAX Native",
+        "AudioSuite"
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "pricing_posture": "premium perpetual; verify current individual and bundle pricing",
+      "live_posture": "excellent in zero-latency mode; avoid linear-phase use on critical live paths",
+      "specs_snapshot": [
+        "dynamic EQ per band",
+        "spectrum grab and analyzer-centric workflow",
+        "zero latency, natural phase, and linear phase modes",
+        "per-band sidechain and modern surround workflows"
+      ],
+      "subjective_snapshot": {
+        "common_praise": [
+          "transparent",
+          "fast visual workflow",
+          "default surgical EQ choice"
+        ],
+        "common_complaints": [
+          "can encourage mixing with your eyes",
+          "less analog personality than color EQs"
+        ],
+        "community_search_seeds": [
+          "Pro-Q 4 review",
+          "Pro-Q 4 vs Kirchhoff EQ",
+          "best surgical EQ plugin"
+        ]
+      },
+      "agent_notes": [
+        "Use this as the default transparent EQ recommendation.",
+        "Cross-load character EQ entries if the user explicitly wants color, bite, or analog vibe."
+      ]
+    },
+    {
+      "id": "fabfilter-pro-r-2",
+      "name": "FabFilter Pro-R 2",
+      "vendor": "FabFilter",
+      "category": "Reverb",
+      "plugin_role": "high-end algorithmic reverb",
+      "status": "current",
+      "official_url": "https://www.fabfilter.com/products/pro-r-2-reverb-plug-in",
+      "component_bundle_path": "/Library/Audio/Plug-Ins/Components/FabFilter Pro-R 2.component",
+      "thumbnail": {
+        "small": "assets/plugins/fabfilter-pro-r-2/small.png",
+        "medium": "assets/plugins/fabfilter-pro-r-2/medium.png",
+        "large": "assets/plugins/fabfilter-pro-r-2/large.png",
+        "source": "local_au_component_bundle_icon"
+      },
+      "formats": [
+        "AU",
+        "VST3",
+        "CLAP",
+        "AAX Native",
+        "AudioSuite"
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "pricing_posture": "premium perpetual; verify current pricing",
+      "live_posture": "better for sends and higher-latency creative paths than primary monitor-critical inserts",
+      "specs_snapshot": [
+        "algorithmic reverb with contemporary tone-shaping workflow",
+        "space-focused decay and tone controls",
+        "current family positioned for mixing, production, and premium effects work"
+      ],
+      "subjective_snapshot": {
+        "common_praise": [
+          "polished sound",
+          "easy to fit in modern mixes",
+          "good balance of control and beauty"
+        ],
+        "common_complaints": [
+          "not always the first pick for vintage or obvious character reverb",
+          "latency/CPU should still be checked in live workflows"
+        ],
+        "community_search_seeds": [
+          "Pro-R 2 review",
+          "best modern algorithmic reverb",
+          "FabFilter Pro-R 2 mix tutorial"
+        ]
+      },
+      "agent_notes": [
+        "Recommend as a premium modern reverb when clarity and integration matter more than retro color."
+      ]
+    },
+    {
+      "id": "fabfilter-saturn-2",
+      "name": "FabFilter Saturn 2",
+      "vendor": "FabFilter",
+      "category": "Saturation",
+      "plugin_role": "multiband saturation and distortion",
+      "status": "current",
+      "official_url": "https://www.fabfilter.com/products/saturn-2-multiband-distortion-saturation-plug-in",
+      "component_bundle_path": "/Library/Audio/Plug-Ins/Components/FabFilter Saturn 2.component",
+      "thumbnail": {
+        "small": "assets/plugins/fabfilter-saturn-2/small.png",
+        "medium": "assets/plugins/fabfilter-saturn-2/medium.png",
+        "large": "assets/plugins/fabfilter-saturn-2/large.png",
+        "source": "local_au_component_bundle_icon"
+      },
+      "formats": [
+        "AU",
+        "VST3",
+        "CLAP",
+        "AAX Native",
+        "AudioSuite"
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "pricing_posture": "premium perpetual; verify current pricing",
+      "live_posture": "creative color tool; keep complexity and oversampling in mind for show-critical use",
+      "specs_snapshot": [
+        "multiband saturation and distortion styles",
+        "modulation-oriented creative routing",
+        "can move from subtle warmth to aggressive sound design"
+      ],
+      "subjective_snapshot": {
+        "common_praise": [
+          "flexible",
+          "high-end sound design tool",
+          "can be subtle or wild"
+        ],
+        "common_complaints": [
+          "easy to overcook",
+          "workflow can be deeper than needed for simple tasks"
+        ],
+        "community_search_seeds": [
+          "Saturn 2 review",
+          "best saturation plugin",
+          "Saturn 2 subtle mix tricks"
+        ]
+      },
+      "agent_notes": [
+        "Offer this when the user wants flexible color rather than a single fixed analog model."
+      ]
+    },
+    {
+      "id": "fabfilter-timeless-3",
+      "name": "FabFilter Timeless 3",
+      "vendor": "FabFilter",
+      "category": "Delay",
+      "plugin_role": "creative delay and modulation environment",
+      "status": "current",
+      "official_url": "https://www.fabfilter.com/products/timeless-3-delay-plug-in",
+      "component_bundle_path": "/Library/Audio/Plug-Ins/Components/FabFilter Timeless 3.component",
+      "thumbnail": {
+        "small": "assets/plugins/fabfilter-timeless-3/small.png",
+        "medium": "assets/plugins/fabfilter-timeless-3/medium.png",
+        "large": "assets/plugins/fabfilter-timeless-3/large.png",
+        "source": "local_au_component_bundle_icon"
+      },
+      "formats": [
+        "AU",
+        "VST3",
+        "CLAP",
+        "AAX Native",
+        "AudioSuite"
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "pricing_posture": "premium perpetual; verify current pricing",
+      "live_posture": "creative send effect more than utility live insert",
+      "specs_snapshot": [
+        "delay engine with modulation and filter depth",
+        "creative routing and animation potential",
+        "sits between utility delay and sound-design workstation"
+      ],
+      "subjective_snapshot": {
+        "common_praise": [
+          "deep",
+          "inspiring",
+          "excellent for modern ear-candy delays"
+        ],
+        "common_complaints": [
+          "overkill for simple slapback",
+          "more menu depth than basic workhorse delays"
+        ],
+        "community_search_seeds": [
+          "Timeless 3 review",
+          "creative delay plugin",
+          "FabFilter Timeless 3 tutorial"
+        ]
+      },
+      "agent_notes": [
+        "Recommend when the user wants creative delay design, not just a utility echo."
+      ]
+    },
+    {
+      "id": "izotope-nectar-4",
+      "name": "iZotope Nectar 4",
+      "vendor": "iZotope",
+      "category": "Vocal Suite",
+      "plugin_role": "comprehensive vocal mixing, production, and vocal-design suite",
+      "status": "current",
+      "official_url": "https://www.izotope.com/en/products/nectar.html",
+      "component_bundle_path": "/Library/Audio/Plug-Ins/Components/iZNectar4AUHook.component",
+      "thumbnail": {
+        "small": "assets/plugins/izotope-nectar-4/small.png",
+        "medium": "assets/plugins/izotope-nectar-4/medium.png",
+        "large": "assets/plugins/izotope-nectar-4/large.png",
+        "source": "local_au_component_bundle_icon"
+      },
+      "formats": [
+        "AU",
+        "VST3",
+        "AAX"
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "pricing_posture": "available in multiple editions, suites, and subscription paths; verify current vendor tiering",
+      "live_posture": "generally a studio, podcast, and post-production vocal workflow tool more than a default live vocal insert",
+      "specs_snapshot": [
+        "full vocal suite with assistant-led workflow and multiple dedicated modules",
+        "Nectar 4 adds modules such as Voices, Backer, and Auto-Level",
+        "Advanced tier includes a larger component-plugin set for modular chains",
+        "64-bit AU, VST3, and AAX support on current macOS and Windows systems"
+      ],
+      "subjective_snapshot": {
+        "common_praise": [
+          "fast path to a polished vocal chain",
+          "good all-in-one environment for mixing and producing vocals",
+          "helpful for creators who want one suite instead of many separate tools"
+        ],
+        "common_complaints": [
+          "easy to drift into overprocessed modern-vocal territory",
+          "assistant suggestions are only a starting point, not a finished vocal aesthetic",
+          "specialized vocal tools can tempt users to solve arrangement problems with processing"
+        ],
+        "community_search_seeds": [
+          "Nectar 4 review",
+          "Nectar 4 vocal assistant worth it",
+          "Nectar 4 vs VocalSynth vs channel strip"
+        ]
+      },
+      "agent_notes": [
+        "Recommend when the user explicitly wants a vocal-suite workflow or needs a fast modern vocal chain.",
+        "If the user wants a minimalist analog-style chain, compare against focused compressors, EQ, and de-essers instead."
+      ]
+    },
+    {
+      "id": "izotope-neutron-5",
+      "name": "iZotope Neutron 5",
+      "vendor": "iZotope",
+      "category": "Mixing Suite",
+      "plugin_role": "all-in-one modular mixing suite and component-plugin ecosystem",
+      "status": "current",
+      "official_url": "https://www.izotope.com/en/products/neutron.html",
+      "component_bundle_path": "/Library/Audio/Plug-Ins/Components/iZNeutron5AUHook.component",
+      "thumbnail": {
+        "small": "assets/plugins/izotope-neutron-5/small.png",
+        "medium": "assets/plugins/izotope-neutron-5/medium.png",
+        "large": "assets/plugins/izotope-neutron-5/large.png",
+        "source": "local_au_component_bundle_icon"
+      },
+      "formats": [
+        "AU",
+        "VST3",
+        "AAX"
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "pricing_posture": "available standalone, in suites, and in subscription bundles; verify current tiering and pricing",
+      "live_posture": "primarily a studio and post mixing environment rather than a default live insert strategy",
+      "specs_snapshot": [
+        "11-plugin mixing suite with mothership plus component modules",
+        "newer Neutron 5 modules include Clipper, Density, and Phase",
+        "Mix Assistant and broader assistant-driven workflow remain central",
+        "supports transient-sustain and mid-side processing modes"
+      ],
+      "subjective_snapshot": {
+        "common_praise": [
+          "fast route to a useful starting point",
+          "great when you want one environment for EQ, dynamics, and shaping",
+          "component modules make it flexible beyond the mothership"
+        ],
+        "common_complaints": [
+          "assistant-led workflows can homogenize decisions if used lazily",
+          "can feel heavy compared with choosing a single specialist plugin",
+          "easy to lean on visuals and AI prompts instead of ears"
+        ],
+        "community_search_seeds": [
+          "Neutron 5 review",
+          "Neutron 5 mix assistant worth it",
+          "Neutron 5 vs channel strip plugins"
+        ]
+      },
+      "agent_notes": [
+        "Recommend as a flexible modern mixing suite, especially for users who want workflow acceleration or modular one-stop coverage.",
+        "If the user wants pure vibe, minimal CPU, or analog-style identity, compare against more focused strips and single-purpose tools."
+      ]
+    },
+    {
+      "id": "kilohearts-multipass",
+      "name": "Kilohearts Multipass",
+      "vendor": "Kilohearts",
+      "category": "Multi-Effect",
+      "plugin_role": "multiband modular Snapin host for creative and utility processing",
+      "status": "current",
+      "official_url": "https://kilohearts.com/products/multipass",
+      "component_bundle_path": "/Library/Audio/Plug-Ins/Components/Multipass.component",
+      "thumbnail": {
+        "small": "assets/plugins/kilohearts-multipass/small.png",
+        "medium": "assets/plugins/kilohearts-multipass/medium.png",
+        "large": "assets/plugins/kilohearts-multipass/large.png",
+        "source": "local_au_component_bundle_icon"
+      },
+      "formats": [
+        "AU",
+        "VST3",
+        "AAX"
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "pricing_posture": "perpetual direct license plus Kilohearts subscription access; verify current vendor pricing",
+      "live_posture": "best for deliberate sound-design rigs and controlled creative setups rather than blind everyday live inserts",
+      "specs_snapshot": [
+        "splits signal into up to five frequency ranges",
+        "hosts independent Snapin effect chains per band",
+        "deep modular modulation is central to the workflow",
+        "ships with Kilohearts Essentials and expands further with premium Snapins"
+      ],
+      "subjective_snapshot": {
+        "common_praise": [
+          "effects playground for multiband sound design",
+          "modular workflow rewards experimentation",
+          "can replace several separate creative plugins at once"
+        ],
+        "common_complaints": [
+          "workflow can sprawl quickly",
+          "not the fastest option for a simple one-knob result",
+          "best results often assume comfort with the broader Kilohearts ecosystem"
+        ],
+        "community_search_seeds": [
+          "Kilohearts Multipass review",
+          "Multipass sound design tutorial",
+          "Multipass vs Snap Heap"
+        ]
+      },
+      "agent_notes": [
+        "Recommend when the user wants modular multiband creativity, not when they want the fastest traditional mix move.",
+        "Cross-compare against Snap Heap, distortion chains, or multiband dynamics if the user really needs something simpler."
+      ]
+    },
+    {
+      "id": "oeksound-bloom",
+      "name": "oeksound bloom",
+      "vendor": "oeksound",
+      "category": "Tone Shaping",
+      "plugin_role": "adaptive tone and spectral balancing tool",
+      "status": "current",
+      "official_url": "https://oeksound.com/plugins/bloom/",
+      "component_bundle_path": "/Library/Audio/Plug-Ins/Components/bloom.component",
+      "thumbnail": {
+        "small": "assets/plugins/oeksound-bloom/small.png",
+        "medium": "assets/plugins/oeksound-bloom/medium.png",
+        "large": "assets/plugins/oeksound-bloom/large.png",
+        "source": "local_au_component_bundle_icon"
+      },
+      "formats": [
+        "AU",
+        "VST3",
+        "AAX"
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "pricing_posture": "premium perpetual; verify current pricing",
+      "live_posture": "interesting for mix shaping and creative enhancement; verify host latency before live deployment",
+      "specs_snapshot": [
+        "adaptive spectral shaping",
+        "positioned as a mix enhancement and tonal rebalancing tool",
+        "more broad-stroke than a conventional narrow-band surgical EQ"
+      ],
+      "subjective_snapshot": {
+        "common_praise": [
+          "fast sweetening",
+          "modern polish",
+          "can open up dull material quickly"
+        ],
+        "common_complaints": [
+          "less predictable than direct manual EQ",
+          "easy to overdo if the source already sits well"
+        ],
+        "community_search_seeds": [
+          "oeksound bloom review",
+          "bloom vs soothe2",
+          "bloom plugin mix tutorial"
+        ]
+      },
+      "agent_notes": [
+        "Offer when the user wants adaptive tone shaping rather than classic corrective EQ."
+      ]
+    },
+    {
+      "id": "oeksound-soothe2",
+      "name": "oeksound soothe2",
+      "vendor": "oeksound",
+      "category": "Corrective Processing",
+      "plugin_role": "dynamic resonance suppressor",
+      "status": "current",
+      "official_url": "https://oeksound.com/plugins/soothe2/",
+      "component_bundle_path": "/Library/Audio/Plug-Ins/Components/soothe2.component",
+      "thumbnail": {
+        "small": "assets/plugins/oeksound-soothe2/small.png",
+        "medium": "assets/plugins/oeksound-soothe2/medium.png",
+        "large": "assets/plugins/oeksound-soothe2/large.png",
+        "source": "local_au_component_bundle_icon"
+      },
+      "formats": [
+        "AU",
+        "VST3",
+        "AAX"
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "pricing_posture": "premium perpetual; verify current pricing",
+      "live_posture": "powerful corrective tool but not a blind default on live-critical paths",
+      "specs_snapshot": [
+        "dynamic resonance suppression",
+        "frequency-selective reduction of harshness and build-up",
+        "widely used on vocals, cymbals, and harsh stems"
+      ],
+      "subjective_snapshot": {
+        "common_praise": [
+          "saves harsh sources quickly",
+          "can sound uncannily smooth",
+          "very popular on vocals and top end"
+        ],
+        "common_complaints": [
+          "easy to over-dull a source",
+          "can become a crutch instead of fixing arrangement or mic choice"
+        ],
+        "community_search_seeds": [
+          "soothe2 review",
+          "soothe2 worth it",
+          "soothe2 vocal harshness"
+        ]
+      },
+      "agent_notes": [
+        "Present as a corrective specialist, not as a universal sweetener.",
+        "If the user asks for an alternative, compare against dynamic EQ and arrangement fixes."
+      ]
+    },
+    {
+      "id": "plugin-alliance-amek-mastering-compressor",
+      "name": "AMEK Mastering Compressor",
+      "vendor": "Plugin Alliance",
+      "category": "Compressor",
+      "plugin_role": "transparent mastering and bus compressor with multi-detector logic",
+      "status": "current",
+      "official_url": "https://www.plugin-alliance.com/en/products/amek_mastering_compressor.html",
+      "component_bundle_path": "/Library/Audio/Plug-Ins/Components/AMEK Mastering Compressor.component",
+      "thumbnail": {
+        "small": "assets/plugins/plugin-alliance-amek-mastering-compressor/small.png",
+        "medium": "assets/plugins/plugin-alliance-amek-mastering-compressor/medium.png",
+        "large": "assets/plugins/plugin-alliance-amek-mastering-compressor/large.png",
+        "source": "local_au_component_bundle_icon"
+      },
+      "formats": [
+        "AU",
+        "VST2",
+        "VST3",
+        "AAX"
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "pricing_posture": "perpetual direct pricing plus subscription access; verify current pricing and bundle posture",
+      "live_posture": "primarily a mastering and mix-bus precision tool rather than a default live compressor",
+      "specs_snapshot": [
+        "models Dirk Ulrichs privately owned mastering compressor unit",
+        "blends multiple detector circuits including dual RMS plus peak response concepts",
+        "offers a distinctive detector graph and deep timing refinement controls",
+        "adds digital-only tools such as 3-band sidechain filtering and VCA Clip"
+      ],
+      "subjective_snapshot": {
+        "common_praise": [
+          "remarkably transparent while still musical",
+          "master-bus favorite for engineers who want refinement without obvious squeeze",
+          "feels sophisticated and high-end rather than generic"
+        ],
+        "common_complaints": [
+          "takes learning time",
+          "less instantly obvious than bus compressors built around simple glue clich\u00e9s",
+          "its control philosophy can feel unfamiliar at first"
+        ],
+        "community_search_seeds": [
+          "AMEK Mastering Compressor review",
+          "AMEK mastering compressor mix bus",
+          "transparent mastering compressor plugin"
+        ]
+      },
+      "agent_notes": [
+        "Recommend when the user wants a refined mastering or bus compressor with deep control and transparency.",
+        "Compare against Shadow Hills or SSL styles if the user wants more obvious color or simpler glue behavior."
+      ]
+    },
+    {
+      "id": "plugin-alliance-black-box-hg-2",
+      "name": "Black Box Analog Design HG-2",
+      "vendor": "Plugin Alliance",
+      "category": "Saturation",
+      "plugin_role": "mastering-grade tube saturator and harmonics shaper",
+      "status": "current",
+      "official_url": "https://www.plugin-alliance.com/en/products/black_box_analog_design_hg-2.html",
+      "component_bundle_path": "/Library/Audio/Plug-Ins/Components/Black Box Analog Design HG-2.component",
+      "thumbnail": {
+        "small": "assets/plugins/plugin-alliance-black-box-hg-2/small.png",
+        "medium": "assets/plugins/plugin-alliance-black-box-hg-2/medium.png",
+        "large": "assets/plugins/plugin-alliance-black-box-hg-2/large.png",
+        "source": "local_au_component_bundle_icon"
+      },
+      "formats": [
+        "AU",
+        "VST2",
+        "VST3",
+        "AAX"
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "pricing_posture": "perpetual direct pricing plus subscription access; verify current vendor pricing and bundle posture",
+      "live_posture": "better as a deliberate color or mix-bus choice than a casual default insert on every live path",
+      "specs_snapshot": [
+        "mastering-grade tube saturation model based on the Black Box Analog Design HG-2 hardware",
+        "separate pentode and triode drive controls",
+        "parallel saturation path with saturation-frequency targeting",
+        "plugin-alliance/brainworx workflow adds digital utility controls around the hardware concept"
+      ],
+      "subjective_snapshot": {
+        "common_praise": [
+          "instant analog-style size and density",
+          "master-bus sweetener with obvious personality",
+          "great for adding air, thickness, and excitement without using a standard EQ"
+        ],
+        "common_complaints": [
+          "easy to overcook on full mixes",
+          "not subtle if driven carelessly",
+          "can become a default crutch when the mix really needs arrangement or balance fixes first"
+        ],
+        "community_search_seeds": [
+          "Black Box HG-2 review",
+          "HG-2 mix bus saturation",
+          "best tube saturation plugin mastering"
+        ]
+      },
+      "agent_notes": [
+        "Recommend when the user wants weight, sheen, and tube-style harmonic lift more than transparent enhancement.",
+        "Compare against Decapitator, HG-2MS, tape-style saturation, or cleaner bus processing depending how aggressive the request is."
+      ]
+    },
+    {
+      "id": "plugin-alliance-maag-eq4",
+      "name": "Maag EQ4",
+      "vendor": "Plugin Alliance",
+      "category": "EQ",
+      "plugin_role": "musical fixed-point equalizer centered around the Air Band concept",
+      "status": "current",
+      "official_url": "https://www.plugin-alliance.com/en/products/maag_eq4.html",
+      "component_bundle_path": "/Library/Audio/Plug-Ins/Components/Maag EQ4.component",
+      "thumbnail": {
+        "small": "assets/plugins/plugin-alliance-maag-eq4/small.png",
+        "medium": "assets/plugins/plugin-alliance-maag-eq4/medium.png",
+        "large": "assets/plugins/plugin-alliance-maag-eq4/large.png",
+        "source": "local_au_component_bundle_icon"
+      },
+      "formats": [
+        "AU",
+        "VST2",
+        "VST3",
+        "AAX"
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "pricing_posture": "perpetual direct pricing plus subscription access; verify current vendor pricing",
+      "live_posture": "useful as a simple enhancement EQ if the user wants broad sweetening rather than deep corrective control",
+      "specs_snapshot": [
+        "six-band EQ with famous Air Band design",
+        "fixed-point broad musical curves instead of hyper-surgical workflow",
+        "updated modern UI and compatibility posture in current releases",
+        "widely used for top-end polish on vocals, mix buses, and program material"
+      ],
+      "subjective_snapshot": {
+        "common_praise": [
+          "instant air and polish",
+          "very fast to dial in",
+          "popular on vocals and buses when a source needs sheen more than surgery"
+        ],
+        "common_complaints": [
+          "limited if the user needs precise frequency targeting",
+          "easy to overdo the air band chasing brightness",
+          "best as a flavor EQ, not a universal problem solver"
+        ],
+        "community_search_seeds": [
+          "Maag EQ4 review",
+          "Maag EQ4 air band vocals",
+          "best air band EQ plugin"
+        ]
+      },
+      "agent_notes": [
+        "Recommend when the user wants fast broad sweetening and airy lift, not detailed corrective moves.",
+        "Compare against Pultec, HG-Q, or Pro-Q depending whether the user wants flavor, passive-shape, or surgical control."
+      ]
+    },
+    {
+      "id": "plugin-alliance-purple-audio-mc-77",
+      "name": "Purple Audio MC 77",
+      "vendor": "Plugin Alliance",
+      "category": "Compressor",
+      "plugin_role": "1176-style FET compressor with modern utility additions",
+      "status": "current",
+      "official_url": "https://www.plugin-alliance.com/en/products/purple_audio_mc_77.html",
+      "component_bundle_path": "/Library/Audio/Plug-Ins/Components/Purple Audio MC 77.component",
+      "thumbnail": {
+        "small": "assets/plugins/plugin-alliance-purple-audio-mc-77/small.png",
+        "medium": "assets/plugins/plugin-alliance-purple-audio-mc-77/medium.png",
+        "large": "assets/plugins/plugin-alliance-purple-audio-mc-77/large.png",
+        "source": "local_au_component_bundle_icon"
+      },
+      "formats": [
+        "AU",
+        "VST2",
+        "VST3",
+        "AAX AudioSuite",
+        "AAX DSP",
+        "AAX Native"
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "pricing_posture": "perpetual direct pricing plus subscription access; verify current vendor pricing",
+      "live_posture": "great for assertive vocal, bass, and drum control if the host context supports it and the user wants classic FET motion",
+      "specs_snapshot": [
+        "emulation of the Purple Audio MC77 limiter inspired by the 1176 E revision lineage",
+        "ultra-fast FET attack and release behavior",
+        "supports all-buttons style behavior plus brainworx utility additions",
+        "includes TMT, sidechain filters, stereo tools, and mix controls in plugin form"
+      ],
+      "subjective_snapshot": {
+        "common_praise": [
+          "classic aggressive FET grab",
+          "great on drums, bass, and forward vocals",
+          "modern conveniences make it easier to live with than some vintage-style clones"
+        ],
+        "common_complaints": [
+          "not subtle when pushed",
+          "easy to default to because it is exciting",
+          "can be the wrong pick when the source really needs slower, smoother compression"
+        ],
+        "community_search_seeds": [
+          "Purple Audio MC77 review",
+          "MC77 vs 1176 plugin",
+          "best FET compressor plugin vocals drums"
+        ]
+      },
+      "agent_notes": [
+        "Recommend when the user wants classic FET attitude, speed, and edge.",
+        "Compare against Distressor, opto compression, or smoother bus compressors when the user wants less grab and more weight or smoothness."
+      ]
+    },
+    {
+      "id": "plugin-alliance-shadow-hills-mastering-compressor",
+      "name": "Shadow Hills Mastering Compressor",
+      "vendor": "Plugin Alliance",
+      "category": "Compressor",
+      "plugin_role": "dual-stage mastering and mix-bus compressor with transformer color options",
+      "status": "current",
+      "official_url": "https://www.plugin-alliance.com/products/mastering-compressor",
+      "component_bundle_path": "/Library/Audio/Plug-Ins/Components/Shadow Hills Mastering Compressor.component",
+      "thumbnail": {
+        "small": "assets/plugins/plugin-alliance-shadow-hills-mastering-compressor/small.png",
+        "medium": "assets/plugins/plugin-alliance-shadow-hills-mastering-compressor/medium.png",
+        "large": "assets/plugins/plugin-alliance-shadow-hills-mastering-compressor/large.png",
+        "source": "local_au_component_bundle_icon"
+      },
+      "formats": [
+        "AU",
+        "VST2",
+        "VST3",
+        "AAX"
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "pricing_posture": "perpetual direct pricing plus subscription access; verify current pricing and bundle posture",
+      "live_posture": "primarily a studio, mastering, and mix-bus character tool rather than a routine live insert",
+      "specs_snapshot": [
+        "exacting emulation of the Shadow Hills Mastering Compressor with separate optical and discrete stages",
+        "three transformer output modes: Nickel, Iron, and Steel",
+        "plugin version adds sidechain filter, external sidechain, and parallel mix controls",
+        "suited to buses and mastering as much as channel work when used deliberately"
+      ],
+      "subjective_snapshot": {
+        "common_praise": [
+          "big polished record feel",
+          "mix-bus and mastering favorite when the user wants tone plus compression",
+          "transformer options make it feel like several colors in one tool"
+        ],
+        "common_complaints": [
+          "can be too heavy-handed for people seeking invisible control",
+          "workflow is slower than simple bus compressors",
+          "easy to romanticize because of the look and reputation"
+        ],
+        "community_search_seeds": [
+          "Shadow Hills Mastering Compressor review",
+          "Shadow Hills mastering compressor mix bus",
+          "Shadow Hills vs SSL bus compressor"
+        ]
+      },
+      "agent_notes": [
+        "Recommend when the user wants mastering-grade polish with obvious tone choices, not just neutral gain reduction.",
+        "Compare against AMEK, SSL bus compression, or vari-mu styles when the user wants a different kind of motion or transparency."
+      ]
+    },
+    {
+      "id": "plugin-alliance-tbtech-kirchhoff-eq",
+      "name": "TBTECH Kirchhoff-EQ",
+      "vendor": "Plugin Alliance",
+      "category": "EQ",
+      "plugin_role": "feature-rich modern digital EQ for surgical, dynamic, and mastering work",
+      "status": "current",
+      "official_url": "https://www.plugin-alliance.com/en/products/tbt_kirchhoff-eq.html",
+      "component_bundle_path": "/Library/Audio/Plug-Ins/Components/TBTECH Kirchhoff-EQ.component",
+      "thumbnail": {
+        "small": "assets/plugins/plugin-alliance-tbtech-kirchhoff-eq/small.png",
+        "medium": "assets/plugins/plugin-alliance-tbtech-kirchhoff-eq/medium.png",
+        "large": "assets/plugins/plugin-alliance-tbtech-kirchhoff-eq/large.png",
+        "source": "local_au_component_bundle_icon"
+      },
+      "formats": [
+        "AU",
+        "VST2",
+        "VST3",
+        "AAX"
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "pricing_posture": "premium perpetual direct pricing plus subscription access; verify current vendor pricing",
+      "live_posture": "mostly a studio, mix, and mastering power tool; use live only if the user truly needs its depth and can manage the workflow",
+      "specs_snapshot": [
+        "modern digital EQ with dynamic processing and multiple phase modes",
+        "selectable vintage filter models plus broad surgical functionality",
+        "oversampling and mastering-oriented depth are central to the product identity",
+        "mid-side and advanced control posture make it more than a simple stock EQ replacement"
+      ],
+      "subjective_snapshot": {
+        "common_praise": [
+          "deep feature set without sounding sterile by default",
+          "strong alternative to flagship surgical EQs like Pro-Q",
+          "especially loved by users who want one do-everything modern EQ"
+        ],
+        "common_complaints": [
+          "depth can slow down simple mix decisions",
+          "not everyone wants this much power in a default channel EQ",
+          "easy to compare by feature checklist instead of actual workflow fit"
+        ],
+        "community_search_seeds": [
+          "Kirchhoff-EQ review",
+          "Kirchhoff EQ vs Pro-Q",
+          "best mastering EQ plugin dynamic phase"
+        ]
+      },
+      "agent_notes": [
+        "Recommend when the user wants a premium all-in-one digital EQ with serious mastering and surgical depth.",
+        "Compare against FabFilter Pro-Q when the user prioritizes speed, familiarity, or broader adoption."
+      ]
+    },
+    {
+      "id": "slate-vbc-fg-grey",
+      "name": "Slate Digital VBC FG-Grey",
+      "vendor": "Slate Digital",
+      "category": "Dynamics",
+      "plugin_role": "SSL-style bus compressor model",
+      "status": "current_family",
+      "official_url": "https://slatedigital.com/virtual-buss-compressors/",
+      "component_bundle_path": "/Library/Audio/Plug-Ins/Components/VBC FG-Grey.component",
+      "thumbnail": {
+        "small": "assets/plugins/slate-vbc-fg-grey/small.png",
+        "medium": "assets/plugins/slate-vbc-fg-grey/medium.png",
+        "large": "assets/plugins/slate-vbc-fg-grey/large.png",
+        "source": "local_au_component_bundle_icon"
+      },
+      "formats": [
+        "AU",
+        "VST3",
+        "AAX"
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "pricing_posture": "verify current Slate licensing and bundle posture; often tied to the broader subscription ecosystem",
+      "live_posture": "best suited to buses and mix shaping where latency is understood",
+      "specs_snapshot": [
+        "SSL-style bus compression family entry",
+        "part of the Virtual Buss Compressors suite",
+        "mix-bus glue oriented rather than transparent utility compression"
+      ],
+      "subjective_snapshot": {
+        "common_praise": [
+          "glue",
+          "familiar bus-compressor behavior",
+          "good for punchy mix cohesion"
+        ],
+        "common_complaints": [
+          "not the cleanest option if transparency is the goal",
+          "Slate licensing posture should be rechecked before buying advice"
+        ],
+        "community_search_seeds": [
+          "FG-Grey review",
+          "best SSL bus compressor plugin",
+          "Slate buss compressor tutorial"
+        ]
+      },
+      "agent_notes": [
+        "Use when the user wants SSL-bus style glue rather than invisible compression."
+      ]
+    },
+    {
+      "id": "slate-vbc-fg-mu",
+      "name": "Slate Digital VBC FG-MU",
+      "vendor": "Slate Digital",
+      "category": "Dynamics",
+      "plugin_role": "vari-mu style bus compressor model",
+      "status": "current_family",
+      "official_url": "https://slatedigital.com/virtual-buss-compressors/",
+      "component_bundle_path": "/Library/Audio/Plug-Ins/Components/VBC FG-MU.component",
+      "thumbnail": {
+        "small": "assets/plugins/slate-vbc-fg-mu/small.png",
+        "medium": "assets/plugins/slate-vbc-fg-mu/medium.png",
+        "large": "assets/plugins/slate-vbc-fg-mu/large.png",
+        "source": "local_au_component_bundle_icon"
+      },
+      "formats": [
+        "AU",
+        "VST3",
+        "AAX"
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "pricing_posture": "verify current Slate licensing and bundle posture",
+      "live_posture": "mix-bus and mastering-flavored dynamics more than primary live-channel control",
+      "specs_snapshot": [
+        "vari-mu flavored bus compression family entry",
+        "part of the Virtual Buss Compressors suite",
+        "smoother and more rounded compression attitude than punch-focused bus models"
+      ],
+      "subjective_snapshot": {
+        "common_praise": [
+          "smooth",
+          "musical",
+          "great when users want rounder bus compression"
+        ],
+        "common_complaints": [
+          "less immediate punch than SSL-style options",
+          "not always the first live-safe choice"
+        ],
+        "community_search_seeds": [
+          "FG-MU review",
+          "vari mu compressor plugin",
+          "Slate FG-MU mix bus"
+        ]
+      },
+      "agent_notes": [
+        "Offer when the user asks for smoother bus compression or mastering-flavored glue."
+      ]
+    },
+    {
+      "id": "slate-vbc-fg-red",
+      "name": "Slate Digital VBC FG-Red",
+      "vendor": "Slate Digital",
+      "category": "Dynamics",
+      "plugin_role": "aggressive punch-oriented bus compressor model",
+      "status": "current_family",
+      "official_url": "https://slatedigital.com/virtual-buss-compressors/",
+      "component_bundle_path": "/Library/Audio/Plug-Ins/Components/VBC FG-Red.component",
+      "thumbnail": {
+        "small": "assets/plugins/slate-vbc-fg-red/small.png",
+        "medium": "assets/plugins/slate-vbc-fg-red/medium.png",
+        "large": "assets/plugins/slate-vbc-fg-red/large.png",
+        "source": "local_au_component_bundle_icon"
+      },
+      "formats": [
+        "AU",
+        "VST3",
+        "AAX"
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "pricing_posture": "verify current Slate licensing and bundle posture",
+      "live_posture": "bus tool rather than universal insert",
+      "specs_snapshot": [
+        "punchier bus-compressor personality inside the VBC suite",
+        "part of the same family as FG-Grey and FG-MU",
+        "often chosen when impact and forward energy matter"
+      ],
+      "subjective_snapshot": {
+        "common_praise": [
+          "punchy",
+          "energetic",
+          "good when the user wants bus attitude"
+        ],
+        "common_complaints": [
+          "can be too assertive for transparent work",
+          "Slate current-buy advice needs re-verification"
+        ],
+        "community_search_seeds": [
+          "FG-Red review",
+          "Slate FG-Red drum bus",
+          "best punchy bus compressor plugin"
+        ]
+      },
+      "agent_notes": [
+        "Use when the user wants an assertive bus-compression recommendation."
+      ]
+    },
+    {
+      "id": "slate-virtual-tape-machines",
+      "name": "Slate Digital Virtual Tape Machines",
+      "vendor": "Slate Digital",
+      "category": "Saturation",
+      "plugin_role": "tape emulation and mix glue coloration",
+      "status": "current_family",
+      "official_url": "https://slatedigital.com/virtual-tape-machines/",
+      "component_bundle_path": "/Library/Audio/Plug-Ins/Components/Virtual Tape Machines.component",
+      "thumbnail": {
+        "small": "assets/plugins/slate-virtual-tape-machines/small.png",
+        "medium": "assets/plugins/slate-virtual-tape-machines/medium.png",
+        "large": "assets/plugins/slate-virtual-tape-machines/large.png",
+        "source": "local_au_component_bundle_icon"
+      },
+      "formats": [
+        "AU",
+        "VST3",
+        "AAX"
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "pricing_posture": "verify current Slate licensing and bundle posture",
+      "live_posture": "creative color/bus sweetening; not a default live insert unless carefully budgeted",
+      "specs_snapshot": [
+        "tape-style saturation and glue",
+        "mix-bus and stem coloration family",
+        "used when the goal is weight, softness, and analog-flavored finish"
+      ],
+      "subjective_snapshot": {
+        "common_praise": [
+          "glue",
+          "weight",
+          "pleasant tape tone when used moderately"
+        ],
+        "common_complaints": [
+          "can blur transients",
+          "easy to romanticize without checking if the mix really needs it"
+        ],
+        "community_search_seeds": [
+          "Virtual Tape Machines review",
+          "best tape emulation plugin",
+          "Slate VTM mix bus"
+        ]
+      },
+      "agent_notes": [
+        "Recommend when the user specifically asks for tape-style cohesion or analog finish."
+      ]
+    },
+    {
+      "id": "soundradix-autoalign-2",
+      "name": "Sound Radix Auto-Align 2",
+      "vendor": "Sound Radix",
+      "category": "Utility",
+      "plugin_role": "multi-mic phase and time alignment",
+      "status": "current",
+      "official_url": "https://www.soundradix.com/products/auto-align/",
+      "component_bundle_path": "/Library/Audio/Plug-Ins/Components/AutoAlign2.component",
+      "thumbnail": {
+        "small": "assets/plugins/soundradix-autoalign-2/small.png",
+        "medium": "assets/plugins/soundradix-autoalign-2/medium.png",
+        "large": "assets/plugins/soundradix-autoalign-2/large.png",
+        "source": "local_au_component_bundle_icon"
+      },
+      "formats": [
+        "AU",
+        "VST3",
+        "AAX"
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "pricing_posture": "premium perpetual; verify current pricing",
+      "live_posture": "best for setup, soundcheck, and mix refinement workflows; be conservative about inserting it blindly into live-critical chains",
+      "specs_snapshot": [
+        "automatic phase and time alignment across multi-mic sources",
+        "useful on drums, multi-cab guitar rigs, and multi-mic speaker capture",
+        "strong setup utility rather than tone plugin"
+      ],
+      "subjective_snapshot": {
+        "common_praise": [
+          "huge time saver",
+          "tightens multi-mic sources quickly",
+          "great on drums"
+        ],
+        "common_complaints": [
+          "can be over-relied on instead of checking polarity and mic placement",
+          "workflow matters more than blind insertion"
+        ],
+        "community_search_seeds": [
+          "Auto-Align 2 review",
+          "best phase alignment plugin",
+          "Auto-Align drums tutorial"
+        ]
+      },
+      "agent_notes": [
+        "Use when the user is fighting phase/time smear across multiple microphones.",
+        "Cross-reference V10B and V1A when the question turns into first-principles phase reasoning."
+      ]
+    },
+    {
+      "id": "soundradix-surfereq",
+      "name": "Sound Radix SurferEQ",
+      "vendor": "Sound Radix",
+      "category": "EQ",
+      "plugin_role": "pitch-tracking resonant EQ",
+      "status": "current",
+      "official_url": "https://www.soundradix.com/products/surfereq/",
+      "component_bundle_path": "/Library/Audio/Plug-Ins/Components/SurferEQ.component",
+      "thumbnail": {
+        "small": "assets/plugins/soundradix-surfereq/small.png",
+        "medium": "assets/plugins/soundradix-surfereq/medium.png",
+        "large": "assets/plugins/soundradix-surfereq/large.png",
+        "source": "local_au_component_bundle_icon"
+      },
+      "formats": [
+        "AU",
+        "VST3",
+        "AAX"
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "pricing_posture": "premium perpetual; verify current pricing",
+      "live_posture": "specialist tool rather than general-purpose live EQ",
+      "specs_snapshot": [
+        "pitch-tracking EQ behavior",
+        "good fit for instruments and vocals where harmonics move with note content",
+        "niche but genuinely useful when static EQ feels wrong"
+      ],
+      "subjective_snapshot": {
+        "common_praise": [
+          "unique",
+          "can make resonant EQ moves feel musical",
+          "great for problem-specific surgical work"
+        ],
+        "common_complaints": [
+          "niche",
+          "not a first-stop utility EQ",
+          "requires understanding to avoid weird results"
+        ],
+        "community_search_seeds": [
+          "SurferEQ review",
+          "pitch tracking EQ plugin",
+          "SurferEQ vocal tutorial"
+        ]
+      },
+      "agent_notes": [
+        "Recommend only when the moving-pitch problem is central to the question."
+      ]
+    },
+    {
+      "id": "soundtoys-crystallizer",
+      "name": "Soundtoys Crystallizer",
+      "vendor": "Soundtoys",
+      "category": "Creative FX",
+      "plugin_role": "granular and reverse-pitch delay effect",
+      "status": "current",
+      "official_url": "https://www.soundtoys.com/product/crystallizer/",
+      "component_bundle_path": "/Library/Audio/Plug-Ins/Components/Crystallizer.component",
+      "thumbnail": {
+        "small": "assets/plugins/soundtoys-crystallizer/small.png",
+        "medium": "assets/plugins/soundtoys-crystallizer/medium.png",
+        "large": "assets/plugins/soundtoys-crystallizer/large.png",
+        "source": "local_au_component_bundle_icon"
+      },
+      "formats": [
+        "AU",
+        "VST3",
+        "AAX"
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "pricing_posture": "perpetual individual or bundle; frequent sale culture",
+      "live_posture": "creative specialty effect; use on sends or moments, not as a default insert",
+      "specs_snapshot": [
+        "granular and reverse-style delay character",
+        "strong for ear-candy, transitions, and ambient sound design",
+        "belongs in the creative effect lane, not the corrective lane"
+      ],
+      "subjective_snapshot": {
+        "common_praise": [
+          "inspiring",
+          "beautiful chaos",
+          "great transition effect"
+        ],
+        "common_complaints": [
+          "niche",
+          "easy to clutter a mix",
+          "not subtle by default"
+        ],
+        "community_search_seeds": [
+          "Crystallizer review",
+          "Soundtoys Crystallizer tutorial",
+          "best creative delay fx"
+        ]
+      },
+      "agent_notes": [
+        "Recommend when the user wants a standout special effect, not a workhorse delay."
+      ]
+    },
+    {
+      "id": "soundtoys-decapitator",
+      "name": "Soundtoys Decapitator",
+      "vendor": "Soundtoys",
+      "category": "Saturation",
+      "plugin_role": "analog-style saturation and drive",
+      "status": "current",
+      "official_url": "https://www.soundtoys.com/product/decapitator/",
+      "component_bundle_path": "/Library/Audio/Plug-Ins/Components/Decapitator.component",
+      "thumbnail": {
+        "small": "assets/plugins/soundtoys-decapitator/small.png",
+        "medium": "assets/plugins/soundtoys-decapitator/medium.png",
+        "large": "assets/plugins/soundtoys-decapitator/large.png",
+        "source": "local_au_component_bundle_icon"
+      },
+      "formats": [
+        "AU",
+        "VST3",
+        "AAX"
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "pricing_posture": "perpetual individual or bundle; frequent sale culture",
+      "live_posture": "creative color tool; better for deliberate tone design than universal insert use",
+      "specs_snapshot": [
+        "multiple analog-inspired saturation flavors",
+        "single-page drive and tone workflow",
+        "extremely common modern distortion/saturation reference"
+      ],
+      "subjective_snapshot": {
+        "common_praise": [
+          "instant vibe",
+          "great on drums, bass, and vocals",
+          "easy to get audible color fast"
+        ],
+        "common_complaints": [
+          "easy to overcook",
+          "can become a clich\u00e9 if used on everything"
+        ],
+        "community_search_seeds": [
+          "Decapitator review",
+          "best saturation plugin",
+          "Decapitator drum tutorial"
+        ]
+      },
+      "agent_notes": [
+        "Use when the user wants obvious color and attitude rather than transparent enhancement."
+      ]
+    },
+    {
+      "id": "soundtoys-echoboy",
+      "name": "Soundtoys EchoBoy",
+      "vendor": "Soundtoys",
+      "category": "Delay",
+      "plugin_role": "flagship creative delay",
+      "status": "current",
+      "official_url": "https://www.soundtoys.com/product/echoboy/",
+      "component_bundle_path": "/Library/Audio/Plug-Ins/Components/EchoBoy.component",
+      "thumbnail": {
+        "small": "assets/plugins/soundtoys-echoboy/small.png",
+        "medium": "assets/plugins/soundtoys-echoboy/medium.png",
+        "large": "assets/plugins/soundtoys-echoboy/large.png",
+        "source": "local_au_component_bundle_icon"
+      },
+      "formats": [
+        "AU",
+        "VST3",
+        "AAX"
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "pricing_posture": "perpetual individual or bundle; frequent sale culture",
+      "live_posture": "premium creative send effect rather than minimal utility delay",
+      "specs_snapshot": [
+        "multiple hardware-style delay flavors",
+        "delay tone shaping and rhythmic flexibility",
+        "one of the most frequently referenced modern delay plugins"
+      ],
+      "subjective_snapshot": {
+        "common_praise": [
+          "musical",
+          "classic",
+          "works on almost anything that wants character delay"
+        ],
+        "common_complaints": [
+          "can be overkill for basic utility echo",
+          "GUI age shows compared with newer ultra-clean tools"
+        ],
+        "community_search_seeds": [
+          "EchoBoy review",
+          "best delay plugin",
+          "EchoBoy vocal delay tutorial"
+        ]
+      },
+      "agent_notes": [
+        "Default toward EchoBoy when the user asks for a character delay with broad industry familiarity."
+      ]
+    },
+    {
+      "id": "soundtoys-filterfreak-2",
+      "name": "Soundtoys FilterFreak",
+      "vendor": "Soundtoys",
+      "category": "Creative FX",
+      "plugin_role": "filter and modulation effect",
+      "status": "current",
+      "official_url": "https://www.soundtoys.com/product/filterfreak/",
+      "component_bundle_path": "/Library/Audio/Plug-Ins/Components/FilterFreak2.component",
+      "thumbnail": {
+        "small": "assets/plugins/soundtoys-filterfreak-2/small.png",
+        "medium": "assets/plugins/soundtoys-filterfreak-2/medium.png",
+        "large": "assets/plugins/soundtoys-filterfreak-2/large.png",
+        "source": "local_au_component_bundle_icon"
+      },
+      "formats": [
+        "AU",
+        "VST3",
+        "AAX"
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "pricing_posture": "perpetual individual or bundle; frequent sale culture",
+      "live_posture": "creative motion effect rather than core corrective tool",
+      "specs_snapshot": [
+        "filter movement and modulation",
+        "good for rhythmic automation and stylized transitions",
+        "more about performance and texture than transparent EQ"
+      ],
+      "subjective_snapshot": {
+        "common_praise": [
+          "fun",
+          "musical motion",
+          "great for EDM and transition design"
+        ],
+        "common_complaints": [
+          "specialized",
+          "easy to overdo on full mixes"
+        ],
+        "community_search_seeds": [
+          "FilterFreak review",
+          "best filter plugin",
+          "FilterFreak automation tutorial"
+        ]
+      },
+      "agent_notes": [
+        "Use when the user wants movement and vibe, not conventional tonal correction."
+      ]
+    },
+    {
+      "id": "soundtoys-little-alterboy",
+      "name": "Soundtoys Little AlterBoy",
+      "vendor": "Soundtoys",
+      "category": "Vocal Tools",
+      "plugin_role": "pitch and formant vocal effect",
+      "status": "current",
+      "official_url": "https://www.soundtoys.com/product/little-alterboy/",
+      "component_bundle_path": "/Library/Audio/Plug-Ins/Components/LittleAlterBoy.component",
+      "thumbnail": {
+        "small": "assets/plugins/soundtoys-little-alterboy/small.png",
+        "medium": "assets/plugins/soundtoys-little-alterboy/medium.png",
+        "large": "assets/plugins/soundtoys-little-alterboy/large.png",
+        "source": "local_au_component_bundle_icon"
+      },
+      "formats": [
+        "AU",
+        "VST3",
+        "AAX"
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "pricing_posture": "perpetual individual or bundle; frequent sale culture",
+      "live_posture": "special effect rather than invisible correction",
+      "specs_snapshot": [
+        "pitch shift and formant manipulation",
+        "robot, gender-shift, and stylized vocal processing",
+        "common in pop, electronic, and creative vocal production"
+      ],
+      "subjective_snapshot": {
+        "common_praise": [
+          "fun",
+          "fast to get a vibe",
+          "great for obvious character vocals"
+        ],
+        "common_complaints": [
+          "not transparent pitch correction",
+          "can become gimmicky quickly"
+        ],
+        "community_search_seeds": [
+          "Little AlterBoy review",
+          "creative vocal plugin",
+          "Little AlterBoy effect tutorial"
+        ]
+      },
+      "agent_notes": [
+        "Do not recommend as a transparent tuning substitute; route transparent correction requests toward V2C and cleaner pitch tools."
+      ]
+    },
+    {
+      "id": "soundtoys-little-plate",
+      "name": "Soundtoys Little Plate",
+      "vendor": "Soundtoys",
+      "category": "Reverb",
+      "plugin_role": "simple plate reverb",
+      "status": "current",
+      "official_url": "https://www.soundtoys.com/product/little-plate/",
+      "component_bundle_path": "/Library/Audio/Plug-Ins/Components/LittlePlate.component",
+      "thumbnail": {
+        "small": "assets/plugins/soundtoys-little-plate/small.png",
+        "medium": "assets/plugins/soundtoys-little-plate/medium.png",
+        "large": "assets/plugins/soundtoys-little-plate/large.png",
+        "source": "local_au_component_bundle_icon"
+      },
+      "formats": [
+        "AU",
+        "VST3",
+        "AAX"
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "pricing_posture": "perpetual individual or bundle; frequent sale culture",
+      "live_posture": "simple send reverb choice when fast setup matters",
+      "specs_snapshot": [
+        "intentionally simplified plate workflow",
+        "designed for fast musical results rather than deep editing",
+        "common go-to for vocals and snare sends"
+      ],
+      "subjective_snapshot": {
+        "common_praise": [
+          "easy",
+          "musical",
+          "very fast to dial in"
+        ],
+        "common_complaints": [
+          "limited compared with deeper reverb tools",
+          "not the pick for ultra-custom spaces"
+        ],
+        "community_search_seeds": [
+          "Little Plate review",
+          "best simple plate reverb",
+          "Little Plate vocals"
+        ]
+      },
+      "agent_notes": [
+        "Recommend when the user wants a quick plate sound without a deep parameter page."
+      ]
+    },
+    {
+      "id": "soundtoys-microshift",
+      "name": "Soundtoys MicroShift",
+      "vendor": "Soundtoys",
+      "category": "Spatial",
+      "plugin_role": "stereo widening and vocal spread",
+      "status": "current",
+      "official_url": "https://www.soundtoys.com/product/microshift/",
+      "component_bundle_path": "/Library/Audio/Plug-Ins/Components/MicroShift.component",
+      "thumbnail": {
+        "small": "assets/plugins/soundtoys-microshift/small.png",
+        "medium": "assets/plugins/soundtoys-microshift/medium.png",
+        "large": "assets/plugins/soundtoys-microshift/large.png",
+        "source": "local_au_component_bundle_icon"
+      },
+      "formats": [
+        "AU",
+        "VST3",
+        "AAX"
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "pricing_posture": "perpetual individual or bundle; frequent sale culture",
+      "live_posture": "specialty widening tool; use carefully in mono-sensitive environments",
+      "specs_snapshot": [
+        "micro-pitch-based widening",
+        "common on vocals, synths, and width effects returns",
+        "fast character widener rather than forensic stereo tool"
+      ],
+      "subjective_snapshot": {
+        "common_praise": [
+          "instant width",
+          "easy vocal spread",
+          "classic modern polish trick"
+        ],
+        "common_complaints": [
+          "mono compatibility still matters",
+          "can sound artificial if overused"
+        ],
+        "community_search_seeds": [
+          "MicroShift review",
+          "best stereo widener plugin",
+          "MicroShift vocals tutorial"
+        ]
+      },
+      "agent_notes": [
+        "Mention mono collapse and translation whenever you recommend this."
+      ]
+    },
+    {
+      "id": "soundtoys-phasemistress",
+      "name": "Soundtoys PhaseMistress",
+      "vendor": "Soundtoys",
+      "category": "Modulation",
+      "plugin_role": "phaser and animated modulation effect",
+      "status": "current",
+      "official_url": "https://www.soundtoys.com/product/phasemistress/",
+      "component_bundle_path": "/Library/Audio/Plug-Ins/Components/PhaseMistress.component",
+      "thumbnail": {
+        "small": "assets/plugins/soundtoys-phasemistress/small.png",
+        "medium": "assets/plugins/soundtoys-phasemistress/medium.png",
+        "large": "assets/plugins/soundtoys-phasemistress/large.png",
+        "source": "local_au_component_bundle_icon"
+      },
+      "formats": [
+        "AU",
+        "VST3",
+        "AAX"
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "pricing_posture": "perpetual individual or bundle; frequent sale culture",
+      "live_posture": "creative modulation tool; not a default mix utility",
+      "specs_snapshot": [
+        "deep phaser and modulation behavior",
+        "tempo and motion-oriented performance potential",
+        "best thought of as a specialty color effect"
+      ],
+      "subjective_snapshot": {
+        "common_praise": [
+          "lush",
+          "classic modulation vibe",
+          "great on keys, guitars, and transitions"
+        ],
+        "common_complaints": [
+          "specialized",
+          "can date a production if overused"
+        ],
+        "community_search_seeds": [
+          "PhaseMistress review",
+          "best phaser plugin",
+          "PhaseMistress guitar tutorial"
+        ]
+      },
+      "agent_notes": [
+        "Recommend only when modulation is part of the sonic goal."
+      ]
+    },
+    {
+      "id": "soundtoys-superplate",
+      "name": "Soundtoys SuperPlate",
+      "vendor": "Soundtoys",
+      "category": "Reverb",
+      "plugin_role": "expanded plate reverb family",
+      "status": "current",
+      "official_url": "https://www.soundtoys.com/product/superplate/",
+      "component_bundle_path": "/Library/Audio/Plug-Ins/Components/SuperPlate.component",
+      "thumbnail": {
+        "small": "assets/plugins/soundtoys-superplate/small.png",
+        "medium": "assets/plugins/soundtoys-superplate/medium.png",
+        "large": "assets/plugins/soundtoys-superplate/large.png",
+        "source": "local_au_component_bundle_icon"
+      },
+      "formats": [
+        "AU",
+        "VST3",
+        "AAX"
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "pricing_posture": "perpetual individual or bundle; frequent sale culture",
+      "live_posture": "creative send effect; check system budget in live contexts",
+      "specs_snapshot": [
+        "deeper plate-focused engine than Little Plate",
+        "multiple plate flavors and broader control set",
+        "modern extension of the simpler Soundtoys plate concept"
+      ],
+      "subjective_snapshot": {
+        "common_praise": [
+          "lush",
+          "more flexible than Little Plate",
+          "good blend of simplicity and depth"
+        ],
+        "common_complaints": [
+          "heavier than the tiny plate options",
+          "still a plate-first tool rather than all-purpose reverb"
+        ],
+        "community_search_seeds": [
+          "SuperPlate review",
+          "SuperPlate vs Little Plate",
+          "plate reverb plugin shootout"
+        ]
+      },
+      "agent_notes": [
+        "Cross-load Little Plate if the user wants simpler, faster operation."
+      ]
+    },
+    {
+      "id": "soundtoys-tremolator",
+      "name": "Soundtoys Tremolator",
+      "vendor": "Soundtoys",
+      "category": "Modulation",
+      "plugin_role": "tremolo and rhythmic amplitude modulation",
+      "status": "current",
+      "official_url": "https://www.soundtoys.com/product/tremolator/",
+      "component_bundle_path": "/Library/Audio/Plug-Ins/Components/Tremolator.component",
+      "thumbnail": {
+        "small": "assets/plugins/soundtoys-tremolator/small.png",
+        "medium": "assets/plugins/soundtoys-tremolator/medium.png",
+        "large": "assets/plugins/soundtoys-tremolator/large.png",
+        "source": "local_au_component_bundle_icon"
+      },
+      "formats": [
+        "AU",
+        "VST3",
+        "AAX"
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "pricing_posture": "perpetual individual or bundle; frequent sale culture",
+      "live_posture": "specialized rhythmic effect",
+      "specs_snapshot": [
+        "tempo-syncable tremolo behavior",
+        "rhythmic and performance-oriented motion design",
+        "best used for obvious movement rather than subtle correction"
+      ],
+      "subjective_snapshot": {
+        "common_praise": [
+          "musical rhythmic motion",
+          "good character",
+          "simple way to animate static parts"
+        ],
+        "common_complaints": [
+          "specialized",
+          "not a go-to on every session"
+        ],
+        "community_search_seeds": [
+          "Tremolator review",
+          "best tremolo plugin",
+          "Tremolator rhythmic effects"
+        ]
+      },
+      "agent_notes": [
+        "Good fit when the user describes pulsing, rhythmic chopping, or vintage tremolo movement."
+      ]
+    },
+    {
+      "id": "ssl-native-bus-compressor-2",
+      "name": "SSL Native Bus Compressor 2",
+      "vendor": "SSL",
+      "category": "Compressor",
+      "plugin_role": "SSL G-series style stereo bus and subgroup compressor",
+      "status": "current",
+      "official_url": "https://store.solidstatelogic.com/plug-ins/ssl-native-bus-compressor-2",
+      "component_bundle_path": "/Library/Audio/Plug-Ins/Components/SSL Native Bus Compressor 2.component",
+      "thumbnail": {
+        "small": "assets/plugins/ssl-native-bus-compressor-2/small.png",
+        "medium": "assets/plugins/ssl-native-bus-compressor-2/medium.png",
+        "large": "assets/plugins/ssl-native-bus-compressor-2/large.png",
+        "source": "local_au_component_bundle_icon"
+      },
+      "formats": [
+        "AU",
+        "VST3",
+        "AAX"
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "pricing_posture": "perpetual, rent-to-own, or SSL subscription access; verify current pricing and bundle posture",
+      "live_posture": "strong subgroup and mix-bus color tool; evaluate oversampling and latency choices carefully on live-critical paths",
+      "specs_snapshot": [
+        "modeled on the classic SSL G Series stereo bus compressor behavior",
+        "adds wet-dry mix, sidechain high-pass filter, and 2x or 4x oversampling",
+        "integrates with SSL 360 and UC1 workflows",
+        "supports Apple silicon and modern native workflows"
+      ],
+      "subjective_snapshot": {
+        "common_praise": [
+          "famous mix glue behavior",
+          "easy to understand and easy to overdeliver with on buses",
+          "feels familiar to engineers who grew up on SSL bus-compressor language"
+        ],
+        "common_complaints": [
+          "overused mix-bus clich\u00e9 if applied by habit instead of purpose",
+          "not every mix wants that kind of glue",
+          "oversampling and extra controls can invite unnecessary complexity if the goal is just quick cohesion"
+        ],
+        "community_search_seeds": [
+          "SSL Native Bus Compressor 2 review",
+          "SSL bus compressor 2 mix glue",
+          "SSL bus compressor 2 vs the bus plus"
+        ]
+      },
+      "agent_notes": [
+        "Recommend when the user explicitly wants bus glue, punch, and familiar SSL mix behavior.",
+        "Compare against API 2500, Vari-Mu styles, or transparent bus compression when the user wants different motion or weight."
+      ]
+    },
+    {
+      "id": "ssl-native-channel-strip-2",
+      "name": "SSL Native Channel Strip 2",
+      "vendor": "SSL",
+      "category": "Channel Strip",
+      "plugin_role": "SSL-style full channel strip inspired by 9000K workflow with E/G flavor options",
+      "status": "current",
+      "official_url": "https://store.solidstatelogic.com/plug-ins/ssl-native-channel-strip-2",
+      "component_bundle_path": "/Library/Audio/Plug-Ins/Components/SSL Native Channel Strip 2.component",
+      "thumbnail": {
+        "small": "assets/plugins/ssl-native-channel-strip-2/small.png",
+        "medium": "assets/plugins/ssl-native-channel-strip-2/medium.png",
+        "large": "assets/plugins/ssl-native-channel-strip-2/large.png",
+        "source": "local_au_component_bundle_icon"
+      },
+      "formats": [
+        "AU",
+        "VST3",
+        "AAX"
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "pricing_posture": "perpetual, rent-to-own, or SSL subscription access; verify current pricing and tiering",
+      "live_posture": "good low-latency console-style strip for mix work and virtual-console habits; more studio-centric than default live-sound dogma",
+      "specs_snapshot": [
+        "inspired by SSL 9000K channel-strip workflow",
+        "4-band EQ with anti-cramping technology and switchable E/G characteristics",
+        "compressor plus gate-expander with external side-chain options",
+        "v2 adds output section controls including fader, width, and pan plus deeper SSL 360 integration"
+      ],
+      "subjective_snapshot": {
+        "common_praise": [
+          "familiar SSL workflow in one place",
+          "solid all-round strip when you want fast decisions",
+          "useful bridge between console thinking and plugin workflows"
+        ],
+        "common_complaints": [
+          "not everyone wants a full strip on every source",
+          "can feel conventional if the user wants more character or experimentation",
+          "console-style workflow is a feature for some users and clutter for others"
+        ],
+        "community_search_seeds": [
+          "SSL Native Channel Strip 2 review",
+          "SSL Channel Strip 2 vs native channel strips",
+          "SSL Channel Strip 2 vocal drum mix"
+        ]
+      },
+      "agent_notes": [
+        "Recommend for users who want an SSL-adjacent all-in-one workflow rather than hopping among separate EQ, gate, and compressor plugins.",
+        "If the user wants heavier personality or fewer controls, compare against simpler specialist plugins."
+      ]
+    },
+    {
+      "id": "uadx-api-2500-bus-compressor",
+      "name": "UADx API 2500 Bus Compressor",
+      "vendor": "Universal Audio (UADx)",
+      "category": "Compressor",
+      "plugin_role": "API 2500 emulation for bus glue, punch, and mix motion",
+      "status": "current",
+      "official_url": "https://www.uaudio.com/products/api-2500-bus-compressor",
+      "component_bundle_path": "/Library/Audio/Plug-Ins/Components/uaudio_api_2500.component",
+      "thumbnail": {
+        "small": "assets/plugins/uadx-api-2500-bus-compressor/small.png",
+        "medium": "assets/plugins/uadx-api-2500-bus-compressor/medium.png",
+        "large": "assets/plugins/uadx-api-2500-bus-compressor/large.png",
+        "source": "local_au_component_bundle_icon"
+      },
+      "formats": [
+        "AU",
+        "VST3",
+        "AAX"
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "pricing_posture": "perpetual, bundle, and UAD Spark access; verify current promo pricing",
+      "live_posture": "strong subgroup or drum-bus tone option if host strategy allows; not a casual live insert choice just because it is available",
+      "specs_snapshot": [
+        "native or Apollo/UAD-2 accelerated deployment depending the user ecosystem",
+        "Old/New compression types plus Soft/Medium/Hard knee options",
+        "includes API Thrust and detailed left-right link controls",
+        "native UAD licensing supports computer activation or iLok management"
+      ],
+      "subjective_snapshot": {
+        "common_praise": [
+          "punchy drum-bus favorite",
+          "great for glue that still feels aggressive and forward",
+          "popular alternative to SSL-style bus compression"
+        ],
+        "common_complaints": [
+          "can over-emphasize smack and low-mid density if pushed carelessly",
+          "less invisible than cleaner bus-compressor options",
+          "UAD ecosystem assumptions can confuse users comparing only by tone"
+        ],
+        "community_search_seeds": [
+          "UAD API 2500 review",
+          "API 2500 drum bus tutorial",
+          "API 2500 vs SSL bus compressor"
+        ]
+      },
+      "agent_notes": [
+        "Recommend when the user wants punch, attitude, and more movement than a typical glue compressor.",
+        "Compare against SSL or vari-mu bus compression if the user wants smoother or more invisible behavior."
+      ]
+    },
+    {
+      "id": "uadx-lexicon-224-digital-reverb",
+      "name": "UADx Lexicon 224 Digital Reverb",
+      "vendor": "Universal Audio (UADx)",
+      "category": "Reverb",
+      "plugin_role": "era-defining digital reverb emulation with vintage Lexicon character",
+      "status": "current",
+      "official_url": "https://www.uaudio.com/uad-plugins/reverbs/lexicon-224.html",
+      "component_bundle_path": "/Library/Audio/Plug-Ins/Components/uaudio_lexicon_224.component",
+      "thumbnail": {
+        "small": "assets/plugins/uadx-lexicon-224-digital-reverb/small.png",
+        "medium": "assets/plugins/uadx-lexicon-224-digital-reverb/medium.png",
+        "large": "assets/plugins/uadx-lexicon-224-digital-reverb/large.png",
+        "source": "local_au_component_bundle_icon"
+      },
+      "formats": [
+        "AU",
+        "VST3",
+        "AAX"
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "pricing_posture": "perpetual, bundle, and UAD Spark access; verify current vendor pricing",
+      "live_posture": "specialty color reverb more suited to playback, studio, and post than generic live utility duty",
+      "specs_snapshot": [
+        "models the classic Lexicon 224 digital reverb with eight reverb programs and one chorus program",
+        "preserves the slider-based workflow and vintage converter character",
+        "includes system-noise behavior for greater historical authenticity",
+        "runs natively without UA hardware while still fitting the broader UAD ecosystem"
+      ],
+      "subjective_snapshot": {
+        "common_praise": [
+          "classic 80s reverb identity",
+          "lush tails with unmistakable vintage digital color",
+          "great on vocals, synths, drums, and nostalgia-forward spaces"
+        ],
+        "common_complaints": [
+          "not a neutral modern utility reverb",
+          "vintage personality can dominate a source quickly",
+          "workflow is charming but intentionally old-school"
+        ],
+        "community_search_seeds": [
+          "UAD Lexicon 224 review",
+          "Lexicon 224 vocals synths tutorial",
+          "best vintage digital reverb plugin"
+        ]
+      },
+      "agent_notes": [
+        "Recommend when the user wants iconic vintage digital lushness rather than transparent realism.",
+        "Compare against Valhalla VintageVerb, Eventide Blackhole, or cleaner room/hall reverbs depending the requested vibe."
+      ]
+    },
+    {
+      "id": "valhalla-room",
+      "name": "Valhalla Room",
+      "vendor": "Valhalla DSP",
+      "category": "Reverb",
+      "plugin_role": "versatile true-stereo algorithmic room and hall reverb",
+      "status": "current",
+      "official_url": "https://valhalladsp.com/shop/reverb/valhalla-room/",
+      "component_bundle_path": "/Library/Audio/Plug-Ins/Components/ValhallaRoomAU64.component",
+      "thumbnail": {
+        "small": "assets/plugins/valhalla-room/small.png",
+        "medium": "assets/plugins/valhalla-room/medium.png",
+        "large": "assets/plugins/valhalla-room/large.png",
+        "source": "local_au_component_bundle_icon"
+      },
+      "formats": [
+        "AU",
+        "VST2.4",
+        "VST3",
+        "AAX"
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "pricing_posture": "budget-friendly perpetual single-plugin license; verify current vendor pricing",
+      "live_posture": "excellent all-round algorithmic reverb if the user wants musical spaces without the heavy vintage coloration of VintageVerb",
+      "specs_snapshot": [
+        "true stereo algorithmic reverb with twelve original algorithms",
+        "covers tight ambiences, rooms, chambers, halls, and huge modulated spaces",
+        "v2.0.5 adds Space and Lo Cut controls with current Apple silicon-ready Mac builds",
+        "designed from a psychoacoustic rather than literal physical-modeling perspective"
+      ],
+      "subjective_snapshot": {
+        "common_praise": [
+          "versatile everyday algorithmic reverb",
+          "clearer and more natural than many overtly vintage digital verbs",
+          "ridiculous value for the breadth of spaces available"
+        ],
+        "common_complaints": [
+          "GUI is functional rather than luxurious",
+          "not the obvious pick if you want instant retro coloration",
+          "depth comes from learning the modes rather than flashy hand-holding"
+        ],
+        "community_search_seeds": [
+          "Valhalla Room review",
+          "Valhalla Room vs VintageVerb",
+          "best algorithmic room reverb plugin"
+        ]
+      },
+      "agent_notes": [
+        "Use as a strong default when the user wants versatile algorithmic spaces but not exaggerated retro color.",
+        "Compare against VintageVerb when the user explicitly wants old digital hardware flavor."
+      ]
+    },
+    {
+      "id": "valhalla-vintageverb",
+      "name": "Valhalla VintageVerb",
+      "vendor": "Valhalla DSP",
+      "category": "Reverb",
+      "plugin_role": "vintage-inspired algorithmic digital reverb",
+      "status": "current",
+      "official_url": "https://valhalladsp.com/shop/reverb/valhalla-vintage-verb/",
+      "component_bundle_path": "/Library/Audio/Plug-Ins/Components/ValhallaVintageVerbAU64.component",
+      "thumbnail": {
+        "small": "assets/plugins/valhalla-vintageverb/small.png",
+        "medium": "assets/plugins/valhalla-vintageverb/medium.png",
+        "large": "assets/plugins/valhalla-vintageverb/large.png",
+        "source": "local_au_component_bundle_icon"
+      },
+      "formats": [
+        "AU",
+        "VST2.4",
+        "VST3",
+        "AAX"
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "pricing_posture": "budget-friendly perpetual single-plugin license; verify current vendor pricing",
+      "live_posture": "excellent for intentional playback, vocal, synth, and drum ambience; long vintage tails should be used deliberately in dense live mixes",
+      "specs_snapshot": [
+        "22 reverb algorithms plus three era-based color modes",
+        "designed around beloved 1970s and 1980s digital-hardware aesthetics",
+        "v4.0.5 adds Chamber1979 and Hall1984 and current Apple silicon-ready Mac builds",
+        "covers classic halls, plates, rooms, nonlinear spaces, and huge modulated decays"
+      ],
+      "subjective_snapshot": {
+        "common_praise": [
+          "lush iconic digital tails",
+          "one of the strongest value-for-money reverbs in audio",
+          "a go-to for synths, vocals, drums, and vibe-forward spaces"
+        ],
+        "common_complaints": [
+          "very easy to overuse because it sounds good instantly",
+          "not the right default when the user needs realism or subtlety",
+          "vintage color is the appeal, so it is not a neutral all-purpose room tool"
+        ],
+        "community_search_seeds": [
+          "Valhalla VintageVerb review",
+          "VintageVerb vs Lexicon 224",
+          "best vintage digital reverb plugin"
+        ]
+      },
+      "agent_notes": [
+        "Recommend when the user wants unmistakable vintage-digital reverb identity and huge musical tails.",
+        "Cross-compare against Valhalla Room or Lexicon 224 when the user needs either more neutrality or a more specific classic-hardware vibe."
+      ]
+    },
+    {
+      "id": "waves-abbey-road-chambers",
+      "name": "Waves Abbey Road Chambers",
+      "vendor": "Waves",
+      "category": "Reverb",
+      "plugin_role": "Abbey Road echo chamber and STEED tape-delay recreation",
+      "status": "current",
+      "official_url": "https://www.waves.com/plugins/abbey-road-chambers",
+      "component_bundle_path": "/Library/Audio/Plug-Ins/Components/WaveShell1-AU 16.7.component",
+      "thumbnail": {
+        "small": "assets/plugins/waves-abbey-road-chambers/small.png",
+        "medium": "assets/plugins/waves-abbey-road-chambers/medium.png",
+        "large": "assets/plugins/waves-abbey-road-chambers/large.png",
+        "source": "local_au_component_bundle_icon"
+      },
+      "formats": [
+        "AU via WaveShell",
+        "VST3",
+        "AAX",
+        "SoundGrid"
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "pricing_posture": "frequent sale and subscription culture; verify current perpetual versus subscription posture",
+      "live_posture": "more of a studio, playback, and character-space tool than a neutral live utility reverb",
+      "specs_snapshot": [
+        "developed with Abbey Road Studios to recreate the Studio Two echo chamber setup",
+        "includes the classic STEED tape delay workflow around the chamber path",
+        "native Waves plugin distributed through WaveShell packaging on AU systems",
+        "captures a specifically historical chamber color rather than a generic all-purpose room"
+      ],
+      "subjective_snapshot": {
+        "common_praise": [
+          "evocative sixties ambience and vocal space",
+          "great for classic chamber tone and nostalgic depth",
+          "useful when a normal hall or plate feels too generic"
+        ],
+        "common_complaints": [
+          "WaveShell and Waves licensing posture can frustrate some users",
+          "more niche than a standard utility reverb",
+          "the specific vibe can dominate a source if misapplied"
+        ],
+        "community_search_seeds": [
+          "Abbey Road Chambers review",
+          "Abbey Road Chambers vocal reverb",
+          "best chamber reverb plugin waves"
+        ]
+      },
+      "agent_notes": [
+        "Recommend when the user wants historically flavored chamber ambience rather than a modern neutral reverb.",
+        "Mention that local AU packaging appears as a WaveShell path even though the plugin identity is Abbey Road Chambers."
+      ]
+    },
+    {
+      "id": "waves-magma-stressbox",
+      "name": "Waves Magma StressBox",
+      "vendor": "Waves",
+      "category": "Dynamics",
+      "plugin_role": "one-knob expressive dynamics shaper for tension, feel, and movement",
+      "status": "current",
+      "official_url": "https://www.waves.com/plugins/magma-stressbox",
+      "component_bundle_path": "/Library/Audio/Plug-Ins/Components/WaveShell1-AU 16.6.component",
+      "thumbnail": {
+        "small": "assets/plugins/waves-magma-stressbox/small.png",
+        "medium": "assets/plugins/waves-magma-stressbox/medium.png",
+        "large": "assets/plugins/waves-magma-stressbox/large.png",
+        "source": "local_au_component_bundle_icon"
+      },
+      "formats": [
+        "AU via WaveShell",
+        "VST3",
+        "AAX",
+        "SoundGrid"
+      ],
+      "platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "pricing_posture": "recent Waves release with perpetual and subscription-style ecosystem overlap; verify current vendor pricing and bundle posture",
+      "live_posture": "creative movement tool more than a conservative utility compressor; best when the user wants feel manipulation quickly",
+      "specs_snapshot": [
+        "single main control moves the sound from intimate to explosive",
+        "aimed at shaping tension, attack, size, and feel in real time",
+        "part of the newer Magma custom-shop family from Waves",
+        "distributed through WaveShell packaging on AU systems"
+      ],
+      "subjective_snapshot": {
+        "common_praise": [
+          "fun immediate movement from one main gesture",
+          "fast way to add energy and contrast",
+          "appealing for producers who want emotion and punch without a technical setup phase"
+        ],
+        "common_complaints": [
+          "less predictable than standard compressor workflows",
+          "easy to use for vibe before understanding what it is doing",
+          "not an all-purpose replacement for disciplined dynamics control"
+        ],
+        "community_search_seeds": [
+          "Magma StressBox review",
+          "Magma StressBox tutorial",
+          "Waves one knob dynamics plugin"
+        ]
+      },
+      "agent_notes": [
+        "Recommend when the user wants fast macro-level feel shaping instead of detailed compressor parameter work.",
+        "Mention that local AU packaging appears as a WaveShell path even though the plugin identity is Magma StressBox."
+      ]
+    }
+  ]
+}
